@@ -1,0 +1,44 @@
+{
+    "builders": [
+        {
+            "ami_name": "{{user `name`}}",
+            "communicator": "winrm",
+            "force_delete_snapshot": true,
+            "force_deregister": true,
+            "instance_type": "{{user `instance`}}",
+            "profile": "{{user `profile`}}",
+            "region": "{{user `region`}}",
+            "source_ami": "{{user `source_ami`}}",
+            "type": "amazon-ebs",
+            "user_data_file": "./scripts/bootstrap_win.ps1",
+            "winrm_insecure": true,
+            "winrm_password": "{{user `password`}}",
+            "winrm_use_ssl": false,
+            "winrm_username": "Administrator"
+        }
+    ],
+    "provisioners": [
+        {
+            "script": "./scripts/download_installers.ps1",
+            "type": "powershell"
+        },
+        {
+            "type": "file",
+                "source": "./scripts/installserver.ps1",
+                "destination": "C:/Users/Administrator/Desktop/installserver.ps1"
+        },
+        {
+            "type": "file",
+            "source": "./files/RuntimeSettings.xml",
+            "destination": "C:/Users/Administrator/Desktop/RuntimeSettings.xml"
+        },
+        {
+            "inline": [
+                "C:/ProgramData/Amazon/EC2-Windows/Launch/Scripts/SendWindowsIsReady.ps1 -Schedule",
+                "C:/ProgramData/Amazon/EC2-Windows/Launch/Scripts/InitializeInstance.ps1 -Schedule",
+                "C:/ProgramData/Amazon/EC2-Windows/Launch/Scripts/SysprepInstance.ps1 -NoShutdown"
+            ],
+            "type": "powershell"
+        }
+    ]
+}

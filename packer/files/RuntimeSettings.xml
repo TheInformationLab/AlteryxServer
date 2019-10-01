@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SystemSettings>
+	<Controller>
+		<EmbeddedMongoDBEnabled>True</EmbeddedMongoDBEnabled>
+		<EmbeddedMongoDBRootPath>C:\ProgramData\Alteryx\Service\Persistence\MongoDB</EmbeddedMongoDBRootPath>
+		<GalleryEnabled>True</GalleryEnabled>
+		<InsightServiceEnabled>True</InsightServiceEnabled>
+		<LoggingEnabled>True</LoggingEnabled>
+		<LoggingPath>C:\ProgramData\Alteryx\Service\AlteryxServiceLog.log</LoggingPath>
+		<LoggingSeverityThreshold>7</LoggingSeverityThreshold>
+		<ServerSecretEncrypted></ServerSecretEncrypted>
+		<SQLitePath>C:\ProgramData\Alteryx\Service\Persistence</SQLitePath>
+		<StorageKeysEncrypted></StorageKeysEncrypted>
+		<WebInterfaceEnabled>True</WebInterfaceEnabled>
+		<WebInterfaceStagingPath>C:\ProgramData\Alteryx\Service\Staging</WebInterfaceStagingPath>
+	</Controller>
+	<Engine>
+		<DefaultTempFilePath>C:\ProgramData\Alteryx\Engine</DefaultTempFilePath>
+		<LogFilePath>C:\ProgramData\Alteryx\Engine\Logs</LogFilePath>
+				<PackageStagingPath>C:\ProgramData\Alteryx\Engine\Staging</PackageStagingPath>
+		<RunAtLowerPriority>True</RunAtLowerPriority>
+	</Engine>
+	<Environment>
+		<Configured>True</Configured>
+		<SetupType>Gallery</SetupType>
+		<WorkingPath>C:\ProgramData\Alteryx\</WorkingPath>
+	</Environment>
+	<Gallery>
+		<DefaultGalleryAdminUserName>jposada@alteryx.com</DefaultGalleryAdminUserName>
+		<LoggingPath>C:\ProgramData\Alteryx\Gallery\Logs</LoggingPath>
+		<SmtpEnabled>False</SmtpEnabled>
+		<WorkingPath>C:\ProgramData\Alteryx\Gallery</WorkingPath>
+	</Gallery>
+	<Worker>
+		<InsightWorkerEnabled>True</InsightWorkerEnabled>
+		<StagingPath>C:\ProgramData\Alteryx\Service\Staging</StagingPath>
+	</Worker>
+</SystemSettings>

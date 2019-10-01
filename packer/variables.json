@@ -1,0 +1,8 @@
+{
+    "name": "Windows_2016_Server",
+    "profile": "customer-success",
+    "region": "us-west-2",
+    "source_ami": "ami-06a0d33fc8d328de0",
+    "instance": "m4.xlarge",
+    "password": "SuperS3cr3t!1"
+}
