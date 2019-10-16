@@ -38,7 +38,7 @@ The intention behind this project is to enable you to deploy a single node deplo
 |destroy|String|`./terraform destroy`|This command will destroy the state of the previously ran `./terraform apply` command output.|
 
 
-#### Contributors
------------------
+Contributors
+------------
 
 If you would like to contribute to this project please send an email to jposada@alteryx.com.
