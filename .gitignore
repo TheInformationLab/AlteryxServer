@@ -1,6 +1,5 @@
 terraform/terraform1.exe
 packer/packer.exe
-packer/scripts/installserver.ps1
 packer/files/AlteryxServerInstallx64_2019.2.7.63499.exe
 terraform/JP.pem
 terraform/.terraform.tfstate.lock.info
