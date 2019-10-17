@@ -23,13 +23,13 @@ Scope
 The intention behind this project is to enable you to deploy a single node deployment of Alteryx Server in the Cloud **(AWS now, Azure and GCP coming soon)** using different tools in a workflow. This project requires Infrastructure as Code **(Packer and Terraform)** and PowerShell Scripts for Windows.
 
 
-#### Attributes for Packer
+#### Attributes for [Packer](https://www.packer.io/)
 |Name  |Type  |Default|Description|
 |------|------|-------|-----------|
 |build|String|`./packer build -var-file="variables.json" server.json`|This command will build the AMI for  Alteryx Server in AWS. This AMI can be used for your Terraform scripts.|
 
 
-#### Attributes for Terraform
+#### Attributes for [Terraform](https://www.terraform.io/)
 |Name  |Type  |Default|Description|
 |------|------|-------|-----------|
 |init|String|`./terraform init`|This command will initialize your directory to use terraform.|
@@ -38,3 +38,7 @@ The intention behind this project is to enable you to deploy a single node deplo
 |destroy|String|`./terraform destroy`|This command will destroy the state of the previously ran `./terraform apply` command output.|
 
 
+Contributors
+------------
+
+If you would like to contribute to this project please send an email to jposada@alteryx.com.

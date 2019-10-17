@@ -1,6 +1,7 @@
 # Do not change the variabe below... Change only if you really want too...
-ALLACCESSIPS = "0.0.0.0/0"
-
+ALLACCESSIPS = [
+    "0.0.0.0/0"
+]
 # Change these IP's for your Private environment
 ALLOWEDIPS = [
     ""
