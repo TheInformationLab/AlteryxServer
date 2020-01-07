@@ -9,3 +9,4 @@ terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
 commands.txt
 server amis.xlsx
+*.ini
