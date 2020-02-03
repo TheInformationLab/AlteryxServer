@@ -1,4 +1,5 @@
 variable "ALLACCESSIPS" {
+  # FIXME:  how does the list() function/mapping apply? why is it not working in this? Does it need a default?
   type = list(string)
 }
 
@@ -9,11 +10,10 @@ variable "ALLOWEDIPS" {
 variable "AMIS" {
   type = map(string)
   default = {
-    us-west-2 = "ami-0b32cfb7b4e1c1d23"
+    #FIXME: currently set to default windows ami for testing.
+    #TODO: develop packer script to create base image and deploy into tf script
+    us-west-2 = "ami-0a1d405ce719bebfd" 
   }
-}
-
-variable "AWS_ACCESS_KEY" {
 }
 
 variable "AWS_INSTANCE" {
@@ -21,9 +21,6 @@ variable "AWS_INSTANCE" {
 
 variable "AWS_REGION" {
   default = "us-west-2"
-}
-
-variable "AWS_SECRET_KEY" {
 }
 
 variable "KEY_NAME" {
